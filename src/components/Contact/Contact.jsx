@@ -6,11 +6,16 @@ import { deleteContact } from '../../redux/contacts/operations';
 import { Avatar, Button } from '@mui/material';
 import { stringAvatar } from '../../utils/utils';
 
+
 const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
 
   const handleDeleteContact = (contactId) => {
-    dispatch(deleteContact(contactId));
+    const isConfirmed = window.confirm('Are you sure you want to delete this contact?');
+
+    if (isConfirmed) {
+      dispatch(deleteContact(contactId));
+    }
   };
 
   return (
@@ -32,10 +37,10 @@ const Contact = ({ id, name, number }) => {
   );
 };
 
-export default Contact;
-
 Contact.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
 };
+
+export default Contact;
