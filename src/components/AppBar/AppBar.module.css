@@ -5,4 +5,5 @@ header.appBar {
     justify-content: space-between;
     padding: 10px 20px;
     border-bottom: 1px solid #ccc;
+    background-color: rgb(33, 32, 77);
 }

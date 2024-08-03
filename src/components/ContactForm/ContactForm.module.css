@@ -23,10 +23,12 @@
 .error {
     color: red
 }
-
 button.btn {
-    max-width: 180px;
     height: 40px;
-    color: #fff;
-    /* border-color: #000; */
+    margin-top: 10px;
+    background-color: rgb(69, 68, 116);
+}
+button.btn:hover,
+button.btn:focus {
+    background-color: rgb(58, 56, 97);
 }
